@@ -1,5 +1,5 @@
 # Learnings of deploying `fabric-samples/token-sdk`
-Watch the creator of this sample run through a [demo](https://www.youtube.com/live/PX9SDva97vQ?si=szRCcHoUVdmvpKnP&t=1899).
+Watch the creator (arne.rutjesisc@nl.ibm.com) of this sample run through a [demo](https://www.youtube.com/live/PX9SDva97vQ?si=szRCcHoUVdmvpKnP&t=1899).
 
 I have only gotten this to work on MacOS. I have tried on Linux (Ubuntu 24.10 and Alpine) and both have failed on installing the `tokengen` utility.
 
