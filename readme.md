@@ -23,10 +23,11 @@ Building the token network application nodes fails when using go version 1.23.x.
 ------
  > [auditor builder 5/7] RUN go mod download:
 0.049 go: errors parsing go.mod:
-[+] Running 0/1pp/go.mod:3: invalid go version '1.23.0': must match format 1.23
+[+] Running 0/1pp/go.mod:3: invalid go version '1.22.0': must match format 1.23
  ⠙ Service auditor  Building                                                 2.1s
 failed to solve: process "/bin/sh -c go mod download" did not complete successfully: exit code: 1
 ```
 
 The error output shows the application node that is being built and is producing the error in `[auditor builder 5/7]`. In this case the error is in the `auditor` node. In the end I had to fix the error for all nodes. For each token network node, I edited the `go.mod` to update the go version statement from `1.22.0` to `1.23`.
 
+The line in `go.mod` is supposed to specify the minimum go version to build with. So it should have worked with version 1.23.4 which was installed. So there should be a neater solution to this error.
